@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "fastapi-backend-template"
-version = "2.0.0"
-description = "A FastAPI backend template."
+name = "edge-sim-py-orch"
+version = "0.0.1"
+description = "A microservice for orchestrating EdgeSimPy simulations and related tasks."
 authors = ["ArielMAJ <ariel.maj@hotmail.com>"]
 readme = "README.md"
 license = "MIT"
@@ -13,13 +13,6 @@ uvicorn = {extras = ["standard"], version = "^0.34.2"}
 loguru = "^0.7.3"
 httpx = "^0.28.1"
 fastapi-cache2 = "^0.2.2"
-alembic = "^1.15.2"
-sqlalchemy = {extras = ["asyncio"], version = "^2.0.40"}
-asyncpg = "^0.30.0"
-fastapi-async-sqlalchemy = "^0.6.1"
-psycopg = "^3.2.9"
-pyjwt = "^2.10.1"
-passlib = {extras = ["bcrypt"], version = "^1.7.4"}
 python-multipart = "^0.0.20"
 pydantic = {extras = ["email"], version = "^2.11.4"}
 
@@ -38,7 +31,7 @@ branch=true
 source = ["src"]
 omit = [
     "src/main.py",
-    "src/config.py",
+    "src/configs/envs.py",
 ]
 
 [build-system]

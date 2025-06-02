@@ -1,7 +1,5 @@
 from fastapi import HTTPException, status
 
-from src.database.models.model_base import ModelBase
-
 
 class UserAlreadyRegistereException(HTTPException):
     def __init__(self, email: str):
@@ -30,10 +28,10 @@ class UserTypeAlreadyRegisteredException(HTTPException):
 
 
 class NotFoundException(HTTPException):
-    def __init__(self, model: ModelBase):
+    def __init__(self):
         super().__init__(
             status_code=status.HTTP_404_NOT_FOUND,
-            detail=[{"msg": f"{model.__name__} not found"}],
+            detail=[{"msg": "Item not found"}],
         )
 
 
