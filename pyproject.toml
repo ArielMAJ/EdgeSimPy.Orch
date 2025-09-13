@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "edge-sim-py-orch"
-version = "0.0.1"
+version = "0.1.0"
 description = "A microservice for orchestrating EdgeSimPy simulations and related tasks."
 authors = ["ArielMAJ <ariel.maj@hotmail.com>"]
 readme = "README.md"
