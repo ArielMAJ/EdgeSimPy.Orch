@@ -2,12 +2,11 @@
 Random number service class.
 """
 
-import asyncio
+import random
 
 from loguru import logger
 
 from src.schemas.random_number import RandomResponse
-from src.utils.random_util import get_random_value
 
 
 class RandomResponseService:
@@ -22,7 +21,6 @@ class RandomResponseService:
 
         :returns: random number.
         """
-        seconds = get_random_value(5)
-        logger.debug(f"Sleeping for {seconds} seconds before answering request.")
-        await asyncio.sleep(seconds)
-        return RandomResponse(message=round(seconds, 2))
+        logger.debug("Random number endpoint called.")
+        random_number = random.randint(1, 100)
+        return RandomResponse(message=random_number)
